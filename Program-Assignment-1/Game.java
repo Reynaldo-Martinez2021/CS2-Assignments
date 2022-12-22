@@ -1,7 +1,7 @@
 /* Reynaldo Martinez
    Dr. Steinberg
    COP3503 Fall 2022
-   Programming Assignment 1
+   Programming Assignment 1 
 */
 import java.io.*;
 
