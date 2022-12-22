@@ -1,0 +1,272 @@
+GAME 1:
+
+	Winning solution for 7x7 Board
+
+	public void playerTwosNextMove() {
+       	if (knight.getColumnPosition() < knight.getBoardSize() - 3) {
+           	 	knight.processKnightMove(computerizedMoves[computersMoveCounter - 1]);
+        	}
+
+        	else if (knight.getColumnPosition() == knight.getRowPosition() && computerizedMoves[computersMoveCounter] == 'd')
+            	knight.processKnightMove('b');
+
+        	else if (computerizedMoves[computersMoveCounter] == 'd')
+            	knight.processKnightMove('r');
+            
+        	else
+            	knight.processKnightMove(computerizedMoves[computersMoveCounter]);
+        
+    	}
+
+	Winning solution for 8x8 Board
+
+    	public void playerTwosNextMove() {
+       	if (knight.getRowPosition() < knight.getBoardSize() - 3) {
+            	knight.processKnightMove(computerizedMoves[computersMoveCounter - 1]);
+        	}
+
+        	else {
+            	knight.processKnightMove(computerizedMoves[computersMoveCounter]);
+       	}
+    	}
+
+	Winning solution for 9x9 Board
+
+	public void playerTwosNextMove() {
+        if (knight.getColumnPosition() < knight.getBoardSize() - 3) {
+            knight.processKnightMove(computerizedMoves[computersMoveCounter - 1]);
+        }
+
+        else if (knight.getColumnPosition() == knight.getRowPosition() && computerizedMoves[computersMoveCounter] == 'd')
+            knight.processKnightMove('b');
+
+        else if (knight.getRowPosition() == knight.getBoardSize() - 2 && computerizedMoves[computersMoveCounter] == 'd')
+            knight.processKnightMove('b');
+        
+        else if (computerizedMoves[computersMoveCounter] == 'd')
+            knight.processKnightMove('r');
+
+        else
+            knight.processKnightMove(computerizedMoves[computersMoveCounter]);
+        
+    	}
+	
+	// special case where the openents piece is on the second to last row position and the next move is d
+	// the move to set me up for a winning move is to move the knight down knowing the night will go right
+	// in other cases we would usually move the knight right for an incoming right move from player 1
+	
+
+GAME 2:
+	
+	Winning solution for 7x7 Board
+	
+	public void playerTwosNextMove() {
+        if (knight.getColumnPosition() < knight.getBoardSize() - 3) {
+            knight.processKnightMove(computerizedMoves[computersMoveCounter - 1]);
+        }
+
+        else if (knight.getColumnPosition() == knight.getRowPosition() && computerizedMoves[computersMoveCounter] == 'd')
+            knight.processKnightMove('b');
+
+        else if (knight.getRowPosition() == knight.getBoardSize() - 2 && computerizedMoves[computersMoveCounter] == 'd')
+            knight.processKnightMove('b');
+        
+        else if (computerizedMoves[computersMoveCounter] == 'd')
+            knight.processKnightMove('r');
+
+        else
+            knight.processKnightMove(computerizedMoves[computersMoveCounter]);
+        
+    	}
+	
+	// no changes were made for creating the winning solution for a 7x7 board
+
+	Winning solution for 8x8 Board
+
+	public void playerTwosNextMove() {
+        	if (knight.getColumnPosition() < knight.getBoardSize() - 3) {
+            	knight.processKnightMove(computerizedMoves[computersMoveCounter - 1]);
+        	}
+
+        	else if (computerizedMoves[computersMoveCounter] == 'd')
+            	knight.processKnightMove('r');
+        	else
+            	knight.processKnightMove(computerizedMoves[computersMoveCounter]);
+        
+    	}
+
+	// the extra else if was for the situation where computersMoveCounter is == 'd' and we need to move right instead of diagonal
+
+	Winning solution for 9x9 board
+
+	public void playerTwosNextMove() {
+        if (knight.getColumnPosition() < knight.getBoardSize() - 3) {
+            knight.processKnightMove(computerizedMoves[computersMoveCounter - 1]);
+        }
+
+        else if (knight.getColumnPosition() == knight.getRowPosition() && computerizedMoves[computersMoveCounter] == 'd')
+            knight.processKnightMove('b');
+
+        else if (knight.getRowPosition() == knight.getBoardSize() - 2 && computerizedMoves[computersMoveCounter] == 'd')
+            knight.processKnightMove('b');
+        
+        else if (computerizedMoves[computersMoveCounter] == 'd')
+            knight.processKnightMove('r');
+
+        else
+            knight.processKnightMove(computerizedMoves[computersMoveCounter]);
+        
+    	}
+
+	// no changes have been made since the extra else if statement checking if the knight is on the second to last row position within
+	// the deadzone
+
+GAME 3:
+	Winning solution for 7x7 Board
+
+	public void playerTwosNextMove() {
+        if (knight.getColumnPosition() < knight.getBoardSize() - 3) {
+            knight.processKnightMove(computerizedMoves[computersMoveCounter - 1]);
+        }
+
+        else if (knight.getColumnPosition() == knight.getRowPosition() && computerizedMoves[computersMoveCounter] == 'd')
+            knight.processKnightMove('b');
+
+        else if (knight.getRowPosition() == knight.getBoardSize() - 2 && computerizedMoves[computersMoveCounter] == 'd')
+            knight.processKnightMove('b');
+
+        else if (knight.getColumnPosition() == knight.getBoardSize() - 2 && computerizedMoves[computersMoveCounter] == 'b')
+            knight.processKnightMove('r');
+        
+        else if (computerizedMoves[computersMoveCounter] == 'd')
+            knight.processKnightMove('r');
+
+        else
+            knight.processKnightMove(computerizedMoves[computersMoveCounter]);
+        
+    	}
+
+	// no changes were made from the 9x9 game 3 solution. Game 3 7x7 board puts us in the same exact position as the 9x9 so that extra else if 
+	// statement makes sure that we go right to put ourselves in a winning move rather than putting player 1 in a spot that is one move away from
+	// a win
+
+	Winning solution for 8x8 Board
+
+	public void playerTwosNextMove() {
+        	if (knight.getColumnPosition() < knight.getBoardSize() - 3) {
+            	knight.processKnightMove(computerizedMoves[computersMoveCounter - 1]);
+        	}
+
+        	else if (computerizedMoves[computersMoveCounter] == 'd')
+            	knight.processKnightMove('r');
+        	else
+            	knight.processKnightMove(computerizedMoves[computersMoveCounter]);
+        
+   	 }
+
+	Winning solution for 9x9 board
+
+	public void playerTwosNextMove() {
+        if (knight.getColumnPosition() < knight.getBoardSize() - 3) {
+            knight.processKnightMove(computerizedMoves[computersMoveCounter - 1]);
+        }
+
+        else if (knight.getColumnPosition() == knight.getRowPosition() && computerizedMoves[computersMoveCounter] == 'd')
+            knight.processKnightMove('b');
+
+        else if (knight.getRowPosition() == knight.getBoardSize() - 2 && computerizedMoves[computersMoveCounter] == 'd')
+            knight.processKnightMove('b');
+
+        else if (knight.getColumnPosition() == knight.getBoardSize() - 2 && computerizedMoves[computersMoveCounter] == 'b')
+            knight.processKnightMove('r');
+        
+        else if (computerizedMoves[computersMoveCounter] == 'd')
+            knight.processKnightMove('r');
+
+        else
+            knight.processKnightMove(computerizedMoves[computersMoveCounter]);
+        
+    	}
+
+	// the extra else if statement is there because when the knight is on a column that is two away from the boarder and the next move is
+	// b we can't move back because that will put us in a winning position for player 1 the winning move is to move right to hit the edge and therefore
+	// allow us to set ourselves up for a winning move
+
+GAME 4:
+
+	Winning solution for 7x7 Board
+
+	public void playerTwosNextMove() {
+        if (knight.getColumnPosition() < knight.getBoardSize() - 3) {
+            knight.processKnightMove(computerizedMoves[computersMoveCounter - 1]);
+        }
+
+        else if (knight.getColumnPosition() == knight.getRowPosition() && computerizedMoves[computersMoveCounter] == 'd')
+            knight.processKnightMove('b');
+
+        else if (knight.getRowPosition() == knight.getBoardSize() - 2 && computerizedMoves[computersMoveCounter] == 'd')
+            knight.processKnightMove('b');
+
+        else if (knight.getColumnPosition() == knight.getBoardSize() - 2 && computerizedMoves[computersMoveCounter] == 'b')
+            knight.processKnightMove('r');
+
+        else if (knight.getColumnPosition() == knight.getBoardSize() - 2 && computerizedMoves[computersMoveCounter] == 'd')
+            knight.processKnightMove('r');
+        
+        else if (computerizedMoves[computersMoveCounter] == 'd')
+            knight.processKnightMove('r');
+
+        else
+            knight.processKnightMove(computerizedMoves[computersMoveCounter]);
+        
+    	}
+
+	// the extra else if added is to prevent the situation where the knight is on a column position that is 2 away from max and the
+	// next move that player 1 will take is a diagonal which means hes going right. to put player 2 in a winning position we must go right
+	// to hit the chess board column boarder this way the only move for player 1 to do is go down and then put us one move away from winning
+
+	Winning solution for 8x8 Board
+
+	public void playerTwosNextMove() {
+        	if (knight.getColumnPosition() < knight.getBoardSize() - 3) {
+            	knight.processKnightMove(computerizedMoves[computersMoveCounter - 1]);
+        	}
+
+        	else if (knight.getColumnPosition() == knight.getRowPosition() && computerizedMoves[computersMoveCounter] == 'd')
+            	knight.processKnightMove('b');
+
+        	else if (computerizedMoves[computersMoveCounter] == 'd')
+            	knight.processKnightMove('r');
+            
+        	else
+           		knight.processKnightMove(computerizedMoves[computersMoveCounter]);
+        
+    	}
+
+	// the extra else if was included because he landed on row = col = 5 and the next move was diagonal
+	// knowing he will go right in such a case the correct move for player 2 was to move diagonal predicting the move right
+	// to set myself up for the winning move
+
+GAME 5:
+
+	Winning solution for game 5 8x8 Board
+
+	public void playerTwosNextMove() {
+        	if (knight.getColumnPosition() < knight.getBoardSize() - 3) {
+            	knight.processKnightMove(computerizedMoves[computersMoveCounter - 1]);
+        	}
+
+        	else if (knight.getColumnPosition() == knight.getRowPosition() && computerizedMoves[computersMoveCounter] == 'd')
+            	knight.processKnightMove('b');
+
+        	else if (computerizedMoves[computersMoveCounter] == 'd')
+            	knight.processKnightMove('r');
+            
+        	else
+            	knight.processKnightMove(computerizedMoves[computersMoveCounter]);
+        
+    	}
+
+	// no changes where made after the additional else if created for game 4 situation
+
+
